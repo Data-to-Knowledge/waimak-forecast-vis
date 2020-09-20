@@ -1,0 +1,100 @@
+scheduling:
+  delay: 12
+
+from_mod_date: '2020-09-20T00:00Z'
+
+datasets:
+  - feature: waterway
+    parameter: streamflow
+    method: forecast
+    processing_code: high_flow_wrf_nz8kmN-NCEP
+    owner: ECan
+    aggregation_statistic: mean
+    frequency_interval: '1H'
+    utc_offset: '0H'
+
+  - feature: waterway
+    parameter: streamflow
+    method: forecast
+    processing_code: high_flow_wrf_nz8kmN-ECMWF
+    owner: ECan
+    aggregation_statistic: mean
+    frequency_interval: '1H'
+    utc_offset: '0H'
+
+  - feature: waterway
+    parameter: streamflow
+    method: forecast
+    processing_code: high_flow_wrf_nz8kmN-UKMO
+    owner: ECan
+    aggregation_statistic: mean
+    frequency_interval: '1H'
+    utc_offset: '0H'
+
+  - feature: waterway
+    parameter: streamflow
+    method: forecast
+    processing_code: high_flow_YR_ECMWF_9km_forecast
+    owner: ECan
+    aggregation_statistic: mean
+    frequency_interval: '1H'
+    utc_offset: '0H'
+
+  - feature: atmosphere
+    parameter: precipitation
+    method: forecast
+    processing_code: YR_ECMWF_9km_forecast
+    owner: MET_Norway
+    aggregation_statistic: cumulative
+    frequency_interval: '1H'
+    utc_offset: '0H'
+
+  - feature: waterway
+    parameter: streamflow
+    method: sensor_recording
+    processing_code: raw_data
+    owner: ECan
+    aggregation_statistic: mean
+    frequency_interval: '1H'
+    utc_offset: '0H'
+
+  - feature: atmosphere
+    parameter: precipitation
+    method: sensor_recording
+    processing_code: raw_data
+    owner: ECan
+    aggregation_statistic: cumulative
+    frequency_interval: '1H'
+    utc_offset: '0H'
+
+  # - feature: waterway
+  #   parameter: streamflow
+  #   method: sensor_recording
+  #   processing_code: quality_controlled_data
+  #   owner: ECan
+  #   aggregation_statistic: mean
+  #   frequency_interval: '1H'
+  #   utc_offset: '0H'
+
+  # - feature: groundwater
+  #   parameter: groundwater_depth
+  #   method: sensor_recording
+  #   processing_code: quality_controlled_data
+  #   owner: ECan
+  #   aggregation_statistic: mean
+  #   frequency_interval: '1H'
+  #   utc_offset: '0H'
+  #
+  # - feature: waterway
+  #   parameter: gage_height
+  #   method: sensor_recording
+  #   processing_code: quality_controlled_data
+  #   owner: ECan
+  #   aggregation_statistic: mean
+  #   frequency_interval: '1H'
+  #   utc_offset: '0H'
+
+
+
+
+# sites: ['217810', '227810', '69617', 'BY19_0026', 'BY19_0040']

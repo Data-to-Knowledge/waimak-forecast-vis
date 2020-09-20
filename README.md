@@ -1,1 +1,1 @@
-# waimak-forecast-vis
+# tethys-wai-vis
