@@ -19,18 +19,18 @@ services:
       RW_PASSWORD: readwriter
     depends_on:
       - "db"
-  updater:
-    image: tethysts/tethys-db-updater:dev
-    volumes:
-      - "/c/ecan/git/waimak-forecast/waimak-forecast-vis/input.yml:/input.yml"
-    depends_on:
-      - "db"
-  web-service:
-    image: tethysts/tethys-web-service:dev
-    depends_on:
-      - "db"
-    ports:
-      - "80:80"
+  # updater:
+  #   image: tethysts/tethys-db-updater:dev
+  #   volumes:
+  #     - "/c/ecan/git/waimak-forecast/waimak-forecast-vis/input.yml:/input.yml"
+  #   depends_on:
+  #     - "db"
+  # web-service:
+  #   image: tethysts/tethys-web-service:dev
+  #   depends_on:
+  #     - "db"
+  #   ports:
+  #     - "80:80"
   # wai-vis:
   #   image: waimak-forecast/waimak-forecast-vis:dev
   #   depends_on:

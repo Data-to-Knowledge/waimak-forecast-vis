@@ -1,7 +1,7 @@
 scheduling:
   delay: 12
 
-from_mod_date: '2020-09-20T00:00Z'
+from_mod_date: '2020-09-22T00:00Z'
 
 datasets:
   - feature: waterway
@@ -32,7 +32,43 @@ datasets:
     utc_offset: '0H'
 
   - feature: waterway
-    parameter: streamflow
+    parameter: gage_height
+    method: forecast
+    processing_code: high_flow_YR_ECMWF_9km_forecast
+    owner: ECan
+    aggregation_statistic: mean
+    frequency_interval: '1H'
+    utc_offset: '0H'
+
+  - feature: waterway
+    parameter: gage_height
+    method: forecast
+    processing_code: high_flow_wrf_nz8kmN-NCEP
+    owner: ECan
+    aggregation_statistic: mean
+    frequency_interval: '1H'
+    utc_offset: '0H'
+
+  - feature: waterway
+    parameter: gage_height
+    method: forecast
+    processing_code: high_flow_wrf_nz8kmN-ECMWF
+    owner: ECan
+    aggregation_statistic: mean
+    frequency_interval: '1H'
+    utc_offset: '0H'
+
+  - feature: waterway
+    parameter: gage_height
+    method: forecast
+    processing_code: high_flow_wrf_nz8kmN-UKMO
+    owner: ECan
+    aggregation_statistic: mean
+    frequency_interval: '1H'
+    utc_offset: '0H'
+
+  - feature: waterway
+    parameter: gage_height
     method: forecast
     processing_code: high_flow_YR_ECMWF_9km_forecast
     owner: ECan
