@@ -1,7 +1,7 @@
 scheduling:
   delay: 12
 
-from_mod_date: '2020-09-22T00:00Z'
+from_mod_date: '2020-09-23T00:00Z'
 
 datasets:
   - feature: waterway
