@@ -31,11 +31,11 @@ services:
     image: tethysts/tethys-web-service:dev
     depends_on:
       - "db"
+    # ports:
+    #   - "80:80"
+  waimak-vis:
+    image: dtok/waimak-forecast-vis:dev
+    depends_on:
+      - "web-service"
     ports:
       - "80:80"
-  # wai-vis:
-  #   image: waimak-forecast/waimak-forecast-vis:dev
-  #   depends_on:
-  #     - "web-service"
-  #   ports:
-  #     - "8080:80"
