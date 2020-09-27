@@ -405,9 +405,9 @@ def serve_layout():
                         layout=map_layout),
                 config={"displaylogo": False}),
         html.Label('Site IDs'),
-        dcc.Dropdown(options=init_sites, id='sites', value=init_sites[0]['value']),
+        dcc.Dropdown(options=init_sites, id='sites', value=init_sites[0]['value'], clearable=False),
         html.Label('Simulation dates'),
-        dcc.Dropdown(options=sim_date_dict, value=max_date, id='sim_dates'),
+        dcc.Dropdown(options=sim_date_dict, value=max_date, id='sim_dates', clearable=False),
 
 #         html.A(
 #             'Download Dataset Summary Data',
