@@ -37,8 +37,6 @@ services:
     #   - "80:8000"
   waimak-vis:
     image: dtok/waimak-forecast-vis:dev
-    environment:
-      VARIABLE_NAME: "server"
     depends_on:
       - "web-service"
     ports:
