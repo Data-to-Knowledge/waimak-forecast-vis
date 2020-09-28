@@ -7,8 +7,8 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: root
     command: --wiredTigerJournalCompressor zstd --wiredTigerCollectionBlockCompressor zstd
-    ports:
-      - "27017:27017"
+    # ports:
+    #   - "27017:27017"
   db-initialize:
     image: tethysts/tethys-db-initialize:dev
     environment:
@@ -29,13 +29,17 @@ services:
       - "db"
   web-service:
     image: tethysts/tethys-web-service:dev
+    environment:
+      PORT: 8000
     depends_on:
       - "db"
     # ports:
-    #   - "80:80"
+    #   - "80:8000"
   waimak-vis:
     image: dtok/waimak-forecast-vis:dev
+    environment:
+      VARIABLE_NAME: "server"
     depends_on:
       - "web-service"
     ports:
-      - "80:80"
+      - "8080:80"
