@@ -336,6 +336,11 @@ def serve_layout():
         #     marks=sim_date_dict,
         #     value=max_date
         #     )
+        dcc.Markdown('''
+
+            This dashboard visualises the flood forecast model output for the Waimakariri River flows at the Old Highway Bridge and water levels at the Gorge. The inputs are measured precipitation at three upstream stations (i.e. Arthur's Pass, Bulls Creek, and Kanuka Hills) and forcasted precipitation by the New Zealand MetService and the Norwegian Meteorological Institute (YR.no). YR.no only provides downscaled forecasts using the [ECMWF](https://www.ecmwf.int/) and MetService provides downscales forecasts using [ECMWF](https://www.ecmwf.int/), [UKMO](https://www.metoffice.gov.uk/), and [NCEP](https://www.ncep.noaa.gov/). The measured precipitation show in the plot is a mean of the three mentioned stations.
+
+            ''')
 
     ], className='seven columns', style={'margin': 10, 'height': 900}),
     # html.Div(id='ts_data', style={'display': 'none'}),
@@ -397,7 +402,7 @@ def display_data(site, sim_date, datasets):
 
 
 if __name__ == '__main__':
-    server.run(debug=True, host='0.0.0.0', port=80)
+    server.run(debug=True, host='0.0.0.0', port=8080)
 
 
 # @server.route("/waimak-forecast")
