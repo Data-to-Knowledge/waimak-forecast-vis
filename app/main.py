@@ -190,7 +190,7 @@ def process_data_for_fig(datasets, site, simulation_date):
         plot_data.append(set1)
 
     # Create layout
-    layout = dict(title = ds_site['ref'] + '<br>' + ds_site['name'], paper_bgcolor = '#F4F4F8', plot_bgcolor = '#F4F4F8', xaxis = dict(title="Date (NZST)", range = [start_date, end_date]), showlegend=True, height=ts_plot_height, yaxis=dict(title=param_map[parameter], titlefont=dict(color="#1f77b4"), tickfont=dict(color="#1f77b4")), yaxis2=dict(title="Precip (mm)", titlefont=dict(color="#ff7f0e"), tickfont=dict(color="#ff7f0e"), anchor="x", overlaying="y", side="right"))
+    layout = dict(title = ds_site['ref'] + '<br>' + ds_site['name'], paper_bgcolor = '#F4F4F8', plot_bgcolor = '#F4F4F8', xaxis = dict(title="Date/Time (NZST)", range = [start_date, end_date]), showlegend=True, height=ts_plot_height, yaxis=dict(title=param_map[parameter], titlefont=dict(color="#1f77b4"), tickfont=dict(color="#1f77b4")), yaxis2=dict(title="Precip (mm)", titlefont=dict(color="#ff7f0e"), tickfont=dict(color="#ff7f0e"), anchor="x", overlaying="y", side="right"))
 
     fig = dict(data=plot_data, layout=layout)
 
